@@ -441,4 +441,21 @@ body::before {
     box-shadow: 0 0 15px red;
     transition: width 0.08s linear;
 }
+body {
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #111 0px,
+        #111 10px,
+        #0c0c0c 10px,
+        #0c0c0c 20px
+    );
+    animation: carbonMove 20s linear infinite;
+}
+
+@keyframes carbonMove {
+    from { background-position: 0 0; }
+    to { background-position: 200px 200px; }
+}
+
 
