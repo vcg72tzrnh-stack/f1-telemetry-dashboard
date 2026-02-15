@@ -179,3 +179,4 @@ if (rpm > 13500) {
 } else {
     rpmBar.style.boxShadow = "0 0 10px #00ffcc";
 }
+let drsZoneActive = false;
