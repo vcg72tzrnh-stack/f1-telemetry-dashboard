@@ -173,3 +173,9 @@ setInterval(() => {
   randomSectorTime("sector2");
   randomSectorTime("sector3");
 }, 3000);
+
+if (rpm > 13500) {
+    rpmBar.style.boxShadow = "0 0 25px red";
+} else {
+    rpmBar.style.boxShadow = "0 0 10px #00ffcc";
+}
