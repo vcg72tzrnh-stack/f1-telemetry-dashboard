@@ -210,5 +210,22 @@ if (rpm > 13000) {
 } else {
   rpmCircle.style.stroke = "#00f7ff";
 }
+let selector = document.getElementById("teamSelector");
+
+selector.addEventListener("change", function () {
+  if (this.value === "ferrari") {
+    document.body.style.color = "red";
+  }
+  else if (this.value === "mercedes") {
+    document.body.style.color = "#00f7ff";
+  }
+  else if (this.value === "redbull") {
+    document.body.style.color = "#1e3cff";
+  }
+  else {
+    document.body.style.color = "white";
+  }
+});
+
 
 
