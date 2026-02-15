@@ -418,3 +418,14 @@ body::before {
 #drsLight {
     color: red;
 }
+.sector div {
+  padding: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.purple {
+  color: #b100ff;
+  text-shadow: 0 0 10px #b100ff;
+}
+
