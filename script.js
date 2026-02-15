@@ -180,3 +180,20 @@ if (rpm > 13500) {
     rpmBar.style.boxShadow = "0 0 10px #00ffcc";
 }
 let drsZoneActive = false;
+// Simulate DRS Zone between RPM 9000 - 12000
+if (rpm > 9000 && rpm < 12000) {
+    drsZoneActive = true;
+} else {
+    drsZoneActive = false;
+}
+
+// Only allow DRS if zone active
+if ((rpm > 11000 && drsZoneActive) || drsManual) {
+    drsLight.innerText = "ON";
+    drsLight.classList.add("on");
+    drsLight.classList.remove("off");
+} else {
+    drsLight.innerText = "OFF";
+    drsLight.classList.add("off");
+    drsLight.classList.remove("on");
+}
