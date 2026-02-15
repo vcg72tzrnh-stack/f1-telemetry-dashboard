@@ -457,5 +457,20 @@ body {
     from { background-position: 0 0; }
     to { background-position: 200px 200px; }
 }
+.rpm-container {
+  position: relative;
+  width: 200px;
+  margin: auto;
+}
+
+.rpm-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+}
+
 
 
