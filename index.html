@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dihen F1 World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    DIHEN F1 WORLD
+</header>
+
+<section class="hero">
+    <h1>Future Race Engineer</h1>
+    <p>Speed. Precision. Strategy.</p>
+    <div class="speed-line"></div>
+</section>
+
+<section class="teams">
+    <h2>Select a Team</h2>
+
+    <div class="team-grid">
+        <a href="ferrari.html" class="team-card ferrari">
+           
+            Ferrari
+        </a>
+
+        <div class="team-card redbull">
+            Red Bull
+        </div>
+
+        <div class="team-card mercedes">
+            Mercedes
+        </div>
+    </div>
+</section>
+
+<section class="calculator">
+    <h2>Lap Time Calculator</h2>
+    <input type="number" id="laps" placeholder="Number of Laps">
+    <input type="number" id="lapTime" placeholder="Lap Time (seconds)">
+    <button onclick="calculateTotal()">Calculate</button>
+    <p id="result"></p>
+</section>
+
+<section class="countdown">
+    <h2>Next Race Countdown</h2>
+    <p id="timer"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+<div class="team-grid">
+
+    <a href="ferrari.html" class="team-card">
+        <img src="images/ferrari.png" class="team-logo">
+        <p>Ferrari</p>
+    </a>
+
+    <a href="#" class="team-card">
+        <img src="images/redbull.png" class="team-logo">
+        <p>Red Bull</p>
+    </a>
+
+    <a href="#" class="team-card">
+        <img src="images/mercedes.png" class="team-logo">
+        <p>Mercedes</p>
+    </a>
+
+</div>
+<img src="images/ferraricar.png" class="team-image">
+<img src="images/redbullcar.png" class="team-image">
+<img src="images/mercedescar.png" class="team-image">
+<section class="dashboard">
+    <h2 class="dash-title">Telemetry Dashboard</h2>
+
+    <div class="speedometer">
+        <div class="needle" id="needle"></div>
+        <div class="center-circle"></div>
+        <div class="speed-text" id="speedText">0 km/h</div>
+    </div>
+
+    <button onclick="increaseSpeed()">Accelerate</button>
+</section>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<section class="ai-dashboard">
+
+    <h2 class="ai-title">AI Telemetry Control</h2>
+
+    <!-- RPM Gauge -->
+    <div class="rpm-gauge">
+        <div class="rpm-fill" id="rpmFill"></div>
+        <p id="rpmText">RPM: 0</p>
+    </div>
+
+    <!-- LED Telemetry Bar -->
+    <div class="led-bar">
+        <div class="led" id="led1"></div>
+        <div class="led" id="led2"></div>
+        <div class="led" id="led3"></div>
+        <div class="led" id="led4"></div>
+        <div class="led" id="led5"></div>
+    </div>
+
+    <!-- Aero Status -->
+    <div class="status-panel">
+        <p>DRS Status: <span id="drsStatus">OFF</span></p>
+    </div>
+
+    <!-- Sector Timing -->
+    <div class="sector">
+        <p>Sector Time: <span id="sectorTime">0.000</span>s</p>
+    </div>
+
+    <!-- Lap Counter -->
+    <div class="lap-counter">
+        <p>Lap: <span id="lapCount">1</span></p>
+    </div>
+
+    <button onclick="simulateTelemetry()">Start Simulation</button>
+
+</section>
+<section class="ai-dashboard">
+
+    <h2 class="ai-title">AI Race Control Prototype</h2>
+
+    <!-- Carbon + Glass Panel -->
+    <div class="glass-panel">
+
+        <div class="rpm-container">
+            <div class="rpm-bar" id="rpmBar"></div>
+        </div>
+
+</section>
+
+<div id="aiControl">AI: Monitoring Race...</div>
+
+<div id="rpmValue">RPM: 0</div>
+<div id="drsLight">OFF</div>
+<div id="lapCounter">1</div>
+
+<div class="rpm-container">
+    <div id="rpmBar" class="rpm-bar"></div>
+</div>
+
+<canvas id="telemetryGraph" width="500" height="200"></canvas>
+
+
