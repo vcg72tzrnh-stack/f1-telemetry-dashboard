@@ -178,16 +178,13 @@ if (rpm > 13500) {
     rpmBar.style.boxShadow = "0 0 25px red";
 } else {
     rpmBar.style.boxShadow = "0 0 10px #00ffcc";
-}
-let drsZoneActive = false;
+}let drsZoneActive = false;
 // Simulate DRS Zone between RPM 9000 - 12000
 if (rpm > 9000 && rpm < 12000) {
     drsZoneActive = true;
 } else {
     drsZoneActive = false;
-}
-
-// Only allow DRS if zone active
+}// Only allow DRS if zone active
 if ((rpm > 11000 && drsZoneActive) || drsManual) {
     drsLight.innerText = "ON";
     drsLight.classList.add("on");
@@ -196,4 +193,22 @@ if ((rpm > 11000 && drsZoneActive) || drsManual) {
     drsLight.innerText = "OFF";
     drsLight.classList.add("off");
     drsLight.classList.remove("on");
+}let rpmCircle = document.getElementById("rpmCircle");
+let rpmText = document.getElementById("rpmText");
+
+let maxRPM = 15000;
+let circumference = 502;
+
+let offset = circumference - (rpm / maxRPM) * circumference;
+rpmCircle.style.strokeDashoffset = offset;
+rpmText.innerText = rpm + " RPM";
+
+if (rpm > 13000) {
+  rpmCircle.style.stroke = "red";
+} else if (rpm > 9000) {
+  rpmCircle.style.stroke = "orange";
+} else {
+  rpmCircle.style.stroke = "#00f7ff";
 }
+
+
