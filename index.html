@@ -145,6 +145,25 @@
 <div class="rpm-container">
     <div id="rpmBar" class="rpm-bar"></div>
 </div>
+<div class="rpm-container">
+  <svg width="200" height="200">
+    <circle cx="100" cy="100" r="80"
+      stroke="#222"
+      stroke-width="15"
+      fill="none" />
+      
+    <circle id="rpmCircle"
+      cx="100" cy="100" r="80"
+      stroke="#00f7ff"
+      stroke-width="15"
+      fill="none"
+      stroke-dasharray="502"
+      stroke-dashoffset="502"
+      stroke-linecap="round"
+      transform="rotate(-90 100 100)" />
+  </svg>
+  <div id="rpmText" class="rpm-text">0 RPM</div>
+</div>
 
 <canvas id="telemetryGraph" width="500" height="200"></canvas>
 <div class="sector">
@@ -152,6 +171,7 @@
   <div id="sector2">Sector 2: 00.000</div>
   <div id="sector3">Sector 3: 00.000</div>
 </div>
+
 
 
 
