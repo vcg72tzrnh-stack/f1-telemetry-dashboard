@@ -156,3 +156,20 @@ if (aiControl) {
     }
 
 }
+function randomSectorTime(id) {
+  let time = (Math.random() * 30).toFixed(3);
+  let element = document.getElementById(id);
+  element.innerText = id.toUpperCase() + ": " + time;
+
+  element.classList.remove("purple");
+
+  if (Math.random() > 0.7) {
+    element.classList.add("purple");
+  }
+}
+
+setInterval(() => {
+  randomSectorTime("sector1");
+  randomSectorTime("sector2");
+  randomSectorTime("sector3");
+}, 3000);
